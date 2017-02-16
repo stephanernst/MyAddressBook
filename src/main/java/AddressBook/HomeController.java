@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * Created by stephanernst on 2/16/2017.
  */
+
 @Controller
 public class HomeController {
 
@@ -18,7 +19,7 @@ public class HomeController {
         return "Hello World";
     }*/
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String greetingForm(Model model) {
         model.addAttribute("greeting", new BuddyInfo());
         return "greeting";
