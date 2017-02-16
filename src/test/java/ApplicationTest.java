@@ -17,7 +17,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 @AutoConfigureMockMvc
 public class ApplicationTest {
 
-
     @Autowired
     private MyController controller;
 

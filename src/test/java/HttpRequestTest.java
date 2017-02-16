@@ -47,7 +47,16 @@ public class HttpRequestTest {
     }
 
     @Test
-    public void greetShouldReturnDefaultMessage() throws Exception {
+    public void addBuddyToAddressBook() {
+        BuddyInfo buddy = new BuddyInfo("Aboud", "6134498327");
+        ResponseEntity<String> response = restTemplate.postForEntity("http://localhost:"+port+"/", buddy, String.class);
+        assertThat(response.getStatusCode().equals(HttpStatus.CREATED));
+    }
 
+    @Test
+    public void removeBuddyFromAddressBook() {
+        BuddyInfo buddy = new BuddyInfo("Aboud", "6134498327");
+        ResponseEntity<String> response = restTemplate.postForEntity("http://localhost:"+port+"/", buddy, String.class);
+        assertThat(response.getStatusCode().equals(HttpStatus.CREATED));
     }
 }
