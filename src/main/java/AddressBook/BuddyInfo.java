@@ -10,8 +10,7 @@ import javax.persistence.Id;
  */
 @Entity
 public class BuddyInfo {
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+
     private Long Id;
     private String name;
     private String phone;
@@ -26,6 +25,7 @@ public class BuddyInfo {
         this.phone = phone;
     }
 
+
     public void setId(Long id) {
         this.Id = id;
     }
@@ -38,6 +38,8 @@ public class BuddyInfo {
         this.phone = phone;
     }
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     public Long getId() {
         return Id;
     }

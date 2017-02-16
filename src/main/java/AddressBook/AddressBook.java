@@ -11,11 +11,8 @@ import java.util.Observable;
 @Entity
 public class AddressBook extends Observable {
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long Id;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
     private Collection<BuddyInfo> buddies;
 
     public AddressBook() {
@@ -26,6 +23,7 @@ public class AddressBook extends Observable {
         this.buddies = buddies;
     }
 
+    @OneToMany(cascade = CascadeType.PERSIST)
     public Collection<BuddyInfo> getBuddies() {
         return buddies;
     }
@@ -34,6 +32,8 @@ public class AddressBook extends Observable {
         Id = id;
     }
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     public Long getId() {
         return this.Id;
     }
