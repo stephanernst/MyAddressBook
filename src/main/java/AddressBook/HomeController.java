@@ -18,7 +18,7 @@ public class HomeController {
         return "Hello World";
     }*/
 
-    @GetMapping("/greeting")
+    @GetMapping("/")
     public String greetingForm(Model model) {
         model.addAttribute("greeting", new BuddyInfo());
         return "greeting";

@@ -25,7 +25,6 @@ public class BuddyInfo {
         this.phone = phone;
     }
 
-
     public void setId(Long id) {
         this.Id = id;
     }

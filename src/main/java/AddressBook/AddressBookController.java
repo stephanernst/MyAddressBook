@@ -17,15 +17,15 @@ public class AddressBookController {
         return "Hello World";
     }*/
 
-    @GetMapping("/addressBooks")
+    @GetMapping("/")
     public String addressBookForm(Model model) {
         model.addAttribute("addressBooks", new AddressBook());
         model.addAttribute("buddy", new BuddyInfo());
         return "addressBooks";
     }
 
-    @PostMapping("/greeting")
-    public String addBuddySubmit(@ModelAttribute BuddyInfo greeting) {
+    @PostMapping("/")
+    public String addBuddySubmit(@ModelAttribute("buddy") BuddyInfo buddy) {
         return "result";
     }
 }
