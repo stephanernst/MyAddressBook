@@ -12,5 +12,4 @@ import java.util.List;
  */
 @RepositoryRestResource(collectionResourceRel = "buddies", path = "buddies")
 public interface BuddyInfoRepository extends CrudRepository<BuddyInfo, Long>{
-    List<BuddyInfo> findByName(String name);
 }
